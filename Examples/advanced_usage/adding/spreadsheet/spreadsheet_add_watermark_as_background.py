@@ -20,16 +20,10 @@ def run():
     load_options = gwos.SpreadsheetLoadOptions()
     with gw.Watermarker(document_path, load_options) as watermarker:
         with gww.ImageWatermark(test_files.LogoPng) as watermark:
-            watermark.vertical_alignment = gwc.VerticalAlignment.TOP
-            watermark.horizontal_alignment = gwc.HorizontalAlignment.CENTER
-            watermark.sizing_type = gww.SizingType.SCALE_TO_PARENT_DIMENSIONS
-            watermark.scale_factor = 1.0
 
-            options = gwos.SpreadsheetWatermarkHeaderFooterOptions()
-            options.worksheet_index = 0
-
+            options = gwos.SpreadsheetBackgroundWatermarkOptions()
             watermarker.add(watermark, options)
 
         watermarker.save(output_document_path)
 
-    print(f"\nspreadsheet_add_image_watermark_into_header_footer executed successfully.\nCheck output in {output_directory}.")
+    print(f"\nspreadsheet_add_watermark_as_background executed successfully.\nCheck output in {output_directory}.")

@@ -8,29 +8,42 @@ if __name__ == '__main__':
     set_license_from_file.run()  
     # set_license_from_stream.run()
     # set_metered_license.run()
+
     hello_world.run()
 
+    #Please uncomment the example you want to try out
+
     ## Basic Usage    
-    get_supported_file_formats.run()
-    get_document_info.run()
-    get_stream_info.run()
-    add_text_watermark.run()
-    add_image_watermark.run()
+    # get_supported_file_formats.run()
+    # get_document_info.run()
+    # get_stream_info.run()
+    # add_text_watermark.run()
+    # add_image_watermark.run()
+    # add_tile_watermark.run()
+    # add_text_watermark_with_custom_font.run()
    
-    # ## Advanced Usage
+    ## Advanced Usage
 
     ## pdf
-    #pdf_add_annotation_watermark.run()
-    #pdf_add_artifact_watermark.run()
+    # pdf_add_annotation_watermark.run()
+    # pdf_add_artifact_watermark.run()
 
     ## presentation
-    #add_watermark_to_slide.run()
+    # add_watermark_to_slide.run()
 
     ## spreadsheet
-    #spreadsheet_add_image_watermark_into_header_footer.run()
+    # spreadsheet_add_image_watermark_into_header_footer.run()
+    # spreadsheet_add_watermark_as_background.run()
+    # spreadsheet_add_watermark_to_worksheet.run()
 
     ## word
-    #word_processing_add_locked_watermark_to_all_pages.run()
+    # word_processing_add_locked_watermark_to_all_pages.run()
+
+    ## diagram
+    # diagram_add_watermark.run()
+
+    ## images
+    # image_add_watermark.run()
 
     ## loading
     # load_from_local_disk.run()
@@ -38,9 +51,9 @@ if __name__ == '__main__':
     # load_password_protected_document.run()
 
     ## searching_modifying
-    #modify_text_in_found_watermarks.run()
-    #modify_text_with_formatting_in_found_watermarks.run()
-    #remove_hyperlinks_with_particular_url.run()
-    #search_image_watermark.run()
-    #search_watermark_with_particular_text_formatting.run()
-    search_watermark.run()
+    # modify_text_in_found_watermarks.run()
+    # modify_text_with_formatting_in_found_watermarks.run()
+    # remove_hyperlinks_with_particular_url.run()
+    # search_image_watermark.run()
+    # search_watermark_with_particular_text_formatting.run()
+    # search_watermark.run()

@@ -9,18 +9,20 @@ import utils
 def run():
     
     # Update with the path to your output directory
+    document_path = test_files.sample_xlsx
     output_directory = utils.get_output_directory_path()
+    output_document_path = join(output_directory, os.path.basename(document_path))
 
     if not os.path.exists(output_directory):
         os.makedirs(output_directory)
 
-    with gw.Watermarker(test_files.sample_xlsx) as watermarker:
+    with gw.Watermarker(document_path) as watermarker:
         watermark = gww.ImageWatermark(test_files.LogoPng)
         watermark.horizontal_alignment = gwс.HorizontalAlignment.CENTER
         watermark.vertical_alignment = gwс.VerticalAlignment.CENTER
 
         watermarker.add(watermark)
-        watermarker.save(join(output_directory, "result.xlsx"))
+        watermarker.save(output_document_path)
 
    
     # Indicate the successful rendering of the source document and specify where to find the output in the specified directory

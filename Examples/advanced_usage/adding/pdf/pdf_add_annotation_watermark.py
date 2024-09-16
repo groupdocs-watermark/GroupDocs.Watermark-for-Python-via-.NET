@@ -10,13 +10,15 @@ import utils
 def run():
     
     # Update with the path to your output directory
+    document_path = test_files.sample_pdf
     output_directory = utils.get_output_directory_path()
+    output_document_path = join(output_directory, os.path.basename(document_path))
 
     if not os.path.exists(output_directory):
         os.makedirs(output_directory)
 
     load_options = gwop.PdfLoadOptions()
-    with gw.Watermarker(test_files.sample_pdf, load_options) as watermarker:
+    with gw.Watermarker(document_path, load_options) as watermarker:
         options = gwop.PdfAnnotationWatermarkOptions()
 
         # Add text watermark
@@ -31,7 +33,7 @@ def run():
             image_watermark.vertical_alignment = gwc.VerticalAlignment.TOP
             watermarker.add(image_watermark, options)
 
-        watermarker.save(join(output_directory, "result.pdf"))
+        watermarker.save(output_document_path)
 
    
     # Indicate the successful rendering of the source document and specify where to find the output in the specified directory

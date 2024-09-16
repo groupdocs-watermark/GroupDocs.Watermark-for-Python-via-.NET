@@ -5,13 +5,12 @@ import os
 from os.path import join
 import inspect
 
+resources_path = "./Resources"
+samples_path = "./Resources/SampleFiles"
+fonts_path = "./Resources/Fonts"
+output_path = "./Output"
+license_path = join(resources_path, "Conholdate.Total.Product.Family.lic")
 
-#license_path = "C:\\licenses\\GroupDocs.Viewer.lic"
-license_path ="D:/GROUPDOCS/gitlab-saltov/management/licenses/Licenses/Conholdate/Total/Subscription/Valid/Conholdate.Total.Product.Family.lic"
-samples_path = "./Examples/Resources/SampleFiles"
-fonts_path = "./Examples/Resources/Fonts"
-output_path = "./Examples/Output"
-    
 def get_output_directory_path():
     caller_frame = inspect.currentframe().f_back
     caller_file_path = caller_frame.f_globals.get("__file__")

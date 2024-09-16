@@ -9,7 +9,7 @@ import utils
 def run():
     
     # Update with the path to your output directory
-    document_path = test_files.sample_pdf_2_page
+    document_path = test_files.sample_pdf
     output_directory = utils.get_output_directory_path()
     output_document_path = join(output_directory, os.path.basename(document_path))
 
@@ -20,17 +20,23 @@ def run():
         font = gww.Font("Arial", 36.0)
         watermark = gww.TextWatermark("top secret", font)
         watermark.foreground_color = gww.Color.red;
-        watermark.horizontal_alignment = gwс.HorizontalAlignment.CENTER
-        watermark.vertical_alignment = gwс.VerticalAlignment.CENTER
         watermark.opacity = 0.4
+        watermark.rotate_angle = 45.0
 
-        pages_setup = gww.PagesSetup()
-        pages_setup.pages = [2,3,4]
-        watermark.pages_setup = pages_setup
+        line_spacing = gww.MeasureValue()
+        line_spacing.measure_type = gww.TileMeasureType.PERCENT
+        line_spacing.value = 12.0
 
+        watermark_spacing = gww.MeasureValue()
+        watermark_spacing.measure_type = gww.TileMeasureType.PERCENT
+        watermark_spacing.value = 10.0
+
+        watermark.tile_options = gww.TileOptions()
+        watermark.tile_options.line_spacing = line_spacing
+        watermark.tile_options.watermark_spacing = watermark_spacing
+            
         watermarker.add(watermark)
         watermarker.save(output_document_path)
 
-   
     # Indicate the successful rendering of the source document and specify where to find the output in the specified directory
-    print(f"\nText watermark added successfully.\nCheck output in {output_directory}.")
+    print(f"\nTile watermark added successfully.\nCheck output in {output_directory}.")

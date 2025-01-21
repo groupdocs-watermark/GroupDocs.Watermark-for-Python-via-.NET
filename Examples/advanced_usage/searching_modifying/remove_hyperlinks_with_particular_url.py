@@ -24,7 +24,7 @@ def run():
                 print(watermarks[i].text)
 
                 # Remove hyperlink from the document
-                watermarks.remove_at(i)
+                del watermarks[i]
 
         watermarker.save(join(output_directory, "result.pdf"))
 

@@ -4,6 +4,7 @@ from . import remove_hyperlinks_with_particular_url
 from . import search_image_watermark
 from . import search_watermark_with_particular_text_formatting
 from . import search_watermark
+from .remove_watermark import *
 
 __all__ = [
     'modify_text_in_found_watermarks',
@@ -11,5 +12,6 @@ __all__ = [
     'remove_hyperlinks_with_particular_url',
     'search_image_watermark',
     'search_watermark_with_particular_text_formatting',
-    'search_watermark'
+    'search_watermark',
+    'remove_watermark'
 ]

@@ -24,6 +24,7 @@ def run():
         watermark.opacity = 0.4
         watermark.rotate_angle = 45.0
         watermark.foreground_color = gww.Color.red
+        watermark.is_background = False
 
         watermarker.add(watermark)
         watermarker.save(join(output_directory, output_document_path))

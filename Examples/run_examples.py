@@ -53,6 +53,7 @@ if __name__ == '__main__':
     ## searching_modifying
     # modify_text_in_found_watermarks.run()
     # modify_text_with_formatting_in_found_watermarks.run()
+    # remove_watermark.run()
     # remove_hyperlinks_with_particular_url.run()
     # search_image_watermark.run()
     # search_watermark_with_particular_text_formatting.run()

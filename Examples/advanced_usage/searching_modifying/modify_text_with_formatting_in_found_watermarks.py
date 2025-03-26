@@ -16,6 +16,7 @@ def run():
 
     with gw.Watermarker(test_files.sample_pdf_with_watermarks) as watermarker:
         search_criteria = gwss.TextSearchCriteria("test", False)
+        search_criteria.pages = [1,3]
         watermarks = watermarker.search(search_criteria)
         for watermark in watermarks:
             try:

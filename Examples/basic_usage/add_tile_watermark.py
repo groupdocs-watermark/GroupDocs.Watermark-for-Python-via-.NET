@@ -16,12 +16,17 @@ def run():
     if not os.path.exists(output_directory):
         os.makedirs(output_directory)
 
+    USER_EMAIL = 'useremail@mail.com'
+    FILE_ID = '1234-4a04-935f-3c83c3079a47'
+    DISCLAIMER = 'Confidential - Do not distribute - Subject to NDA'
+
     with gw.Watermarker(document_path) as watermarker:
-        font = gww.Font("Arial", 36.0)
-        watermark = gww.TextWatermark("top secret", font)
-        watermark.foreground_color = gww.Color.red;
+        font = gww.Font('Arial', 10.0)
+        watermark = gww.TextWatermark(f'{USER_EMAIL}\n{FILE_ID}\n{DISCLAIMER}', font)
+        watermark.foreground_color = gww.Color.gray
         watermark.opacity = 0.4
-        watermark.rotate_angle = 45.0
+        watermark.rotate_angle = -45.0
+        watermark.text_alignment = gww.TextAlignment.CENTER
 
         line_spacing = gww.MeasureValue()
         line_spacing.measure_type = gww.TileMeasureType.PERCENT
@@ -31,10 +36,13 @@ def run():
         watermark_spacing.measure_type = gww.TileMeasureType.PERCENT
         watermark_spacing.value = 10.0
 
-        watermark.tile_options = gww.TileOptions()
-        watermark.tile_options.line_spacing = line_spacing
-        watermark.tile_options.watermark_spacing = watermark_spacing
-            
+        tile_options = gww.TileOptions()
+        tile_options.tile_type = gww.TileType.ONE_THIRD_OFFSET
+        tile_options.line_spacing = line_spacing
+        tile_options.watermark_spacing = watermark_spacing
+
+        watermark.tile_options = tile_options
+
         watermarker.add(watermark)
         watermarker.save(output_document_path)
 

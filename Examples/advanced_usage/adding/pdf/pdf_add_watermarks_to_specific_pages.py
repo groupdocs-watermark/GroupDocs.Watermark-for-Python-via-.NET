@@ -19,22 +19,27 @@ def run():
 
     load_options = gwop.PdfLoadOptions()
     with gw.Watermarker(document_path, load_options) as watermarker:
-        options = gwop.PdfAnnotationWatermarkOptions()
-
         # Add text watermark
-        text_watermark = gww.TextWatermark("This is a annotation watermark", gww.Font("Arial", 8.0))
-        text_watermark.horizontal_alignment = gwc.HorizontalAlignment.LEFT
-        text_watermark.vertical_alignment = gwc.VerticalAlignment.TOP
-        watermarker.add(text_watermark, options)
+        text_watermark = gww.TextWatermark("This is a test watermark", gww.Font("Arial", 8.0))
+        text_watermark.foreground_color = gww.Color.red;
+        text_watermark.horizontal_alignment = gwc.HorizontalAlignment.CENTER
+        text_watermark.vertical_alignment = gwc.VerticalAlignment.CENTER
+        pages_setup = gww.PagesSetup()
+        pages_setup.pages = [2,3,4]
+        text_watermark.pages_setup = pages_setup
+        watermarker.add(text_watermark)
 
-        # Add image watermark
+        # Add image watermark to the last page
         with gww.ImageWatermark(test_files.LogoPng) as image_watermark:
             image_watermark.horizontal_alignment = gwc.HorizontalAlignment.RIGHT
             image_watermark.vertical_alignment = gwc.VerticalAlignment.TOP
-            watermarker.add(image_watermark, options)
+            pages_setup = gww.PagesSetup()
+            pages_setup.last_page = True
+            image_watermark.pages_setup = pages_setup
+            watermarker.add(image_watermark)
 
         watermarker.save(output_document_path)
 
    
     # Indicate the successful rendering of the source document and specify where to find the output in the specified directory
-    print(f"\pdf_add_annotation_watermark executed successfully.\nCheck output in {output_directory}.")
+    print(f"\pdf_add_watermarks_to_specific_pages executed successfully.\nCheck output in {output_directory}.")

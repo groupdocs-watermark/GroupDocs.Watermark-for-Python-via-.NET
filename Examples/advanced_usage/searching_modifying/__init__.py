@@ -4,7 +4,7 @@ from . import remove_hyperlinks_with_particular_url
 from . import search_image_watermark
 from . import search_watermark_with_particular_text_formatting
 from . import search_watermark
-from .remove_watermark import *
+from . import remove_watermark
 
 __all__ = [
     'modify_text_in_found_watermarks',

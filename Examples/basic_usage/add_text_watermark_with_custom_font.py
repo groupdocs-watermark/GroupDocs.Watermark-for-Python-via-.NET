@@ -1,6 +1,6 @@
 import groupdocs.watermark as gw
 import groupdocs.watermark.watermarks as gww
-import groupdocs.watermark.common as gwс
+import groupdocs.watermark.common as gwc
 import os
 from os.path import join
 import test_files
@@ -22,9 +22,9 @@ def run():
         watermark = gww.TextWatermark("top secret", font)
         watermark.foreground_color = gww.Color.red;
         watermark.opacity = 0.4
-        watermark.x = 10.0
-        watermark.y = 500.0
-            
+        watermark.horizontal_alignment = gwc.HorizontalAlignment.CENTER
+        watermark.vertical_alignment = gwc.VerticalAlignment.CENTER
+
         watermarker.add(watermark)
         watermarker.save(output_document_path)
 

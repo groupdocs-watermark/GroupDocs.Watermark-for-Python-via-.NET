@@ -1,0 +1,50 @@
+# GroupDocs.Watermark Python Examples
+
+## Overview
+Repository containing Python examples for GroupDocs.Watermark for Python via .NET - a document watermarking solution supporting 40+ file formats including PDF, Word, Excel, PowerPoint, and images.
+
+## Core Functionality
+- Add text/image watermarks to documents via Pythonic API
+- Remove existing watermarks (including third-party)
+- Search watermarks by text, formatting, or custom criteria
+- Invisible watermarking and steganographic embedding
+- Batch watermark processing and automation
+- Custom watermark styling with fonts, colors, transparency
+- Tiling watermarks for comprehensive page coverage
+- Context manager support for automatic resource cleanup
+
+## Key Use Cases
+- Python web application document security (Django, Flask, FastAPI)
+- Data science and document processing pipelines
+- Content protection and brand enforcement
+- Automated watermark processing in Python workflows
+- Integration with existing Python document management systems
+- API-based watermarking services
+
+## Supported Formats
+**Documents**: PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, RTF, ODT
+**Images**: PNG, JPG, BMP, TIFF, GIF, WEBP
+**Email**: EML, MSG, EMLX
+**Other**: Visio files, various proprietary formats
+
+## Technical Details
+- Python 3.6+ compatibility
+- PyPI package: groupdocs-watermark-net
+- Built on .NET via Python.NET bridge
+- Cross-platform: Windows, macOS, Linux
+- Pythonic API with context managers and type hints
+- Thread-safe operations for concurrent processing
+
+## Repository Structure
+- `/Examples` - Core Python implementation examples with complete source code
+
+## Python Integration
+- PyPI package management (pip install)
+- Django/Flask/FastAPI framework compatibility
+- Jupyter notebook friendly
+- Data science pipeline integration
+- RESTful API development suitable
+- Async/await pattern compatible
+
+## AI/LLM Context
+Perfect for AI applications requiring automated document processing, Python-based watermarking workflows, or integration into machine learning pipelines. Examples demonstrate programmatic watermark manipulation suitable for data science projects, web applications, and automated document processing systems. Ideal for Python developers building document security features into AI/ML applications.

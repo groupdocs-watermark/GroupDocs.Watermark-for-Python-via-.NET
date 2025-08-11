@@ -2,7 +2,7 @@
 
 **Document security** made simple with Python watermarking solutions. This repository contains comprehensive examples demonstrating **how to watermark files**, **add watermark**, **create watermark**, **remove watermark**, and implement **invisible watermarking for documents** using GroupDocs.Watermark for Python via .NET.
 
-## 🔐 Python Document Security & Content Protection
+## 🔐 Python Watermarking Library for Document Security & PDF Content Protection
 
 **Protect documents with watermarks** across 40+ file formats with powerful **content protection with watermarking** capabilities:
 
@@ -16,9 +16,15 @@
 
 ## 📁 Repository Structure
 
-| Directory | Description |
-|-----------|-------------|
-| [Examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/tree/master/Examples) | Complete Python examples showing **how to watermark a** document and implement **document security** |
+| Directory/File | Description |
+|----------------|-------------|
+| **Examples/** | Root folder containing all example scripts |
+| ├── [advanced_usage](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/tree/master/Examples/advanced_usage) | Advanced usage examples demonstrating complex watermarking scenarios |
+| ├── [basic_usage](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/tree/master/Examples/basic_usage) | Basic examples for adding, editing, and removing watermarks |
+| ├── [quick_start](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/tree/master/Examples/quick_start) | Quick start examples to run and test watermark features immediately |
+| ├── [run_examples.py](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/run_examples.py) | Main script to execute all examples |
+| ├── [test_files.py](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/test_files.py) | Paths and settings for test files used in examples |
+| └── [utils.py](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/utils.py) | Utility functions for handling watermark operations |
 
 ## How to run examples
 
@@ -77,16 +83,14 @@ def run():
 ## 📋 Python Watermarking Examples by Use Case
 
 ### Basic Watermarking Operations
-- **How to watermark in** PDF documents with Python
-- **Create watermark** with custom fonts and styling
-- **Add watermark** to multiple pages simultaneously
-- **Customize watermark** transparency and rotation angles
+- [How to watermark in](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/basic_usage/add_text_watermark.py) PDF documents with Python
+- [Create watermark](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/basic_usage/add_text_watermark_with_custom_font.py) with custom fonts and styling
+- [Add watermark]((https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/advanced_usage/adding/pdf/pdf_add_watermarks_to_specific_pages.py)) to multiple pages simultaneously
+- [Customize watermark](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/basic_usage/add_tile_watermark.py) transparency, rotation, and positioning — with the ability to apply tiled watermarks across entire pages for full coverage.
 
 ### Advanced Document Security
-- **Removing watermark from** third-party applications
-- **Delete watermark from** specific document regions
-- **Can you remove watermark from** password-protected files
-- **How to remove watermarks in** batch processing workflows
+- [Delete watermark from](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/advanced_usage/searching_modifying/remove_watermark.py) specific document regions
+- [Can you remove watermark from](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/advanced_usage/loading/load_password_protected_document.py) password-protected files
 
 ### Enterprise Python Solutions
 - **Watermark automation for enterprise** document management systems
@@ -114,6 +118,10 @@ def run():
 - [Live Demo - **How to Watermark** Online](https://products.groupdocs.com/watermark/family)
 - [Python Package on PyPI](https://pypi.org/project/groupdocs-watermark-net/)
 - [Developer Blog](https://blog.groupdocs.com/category/watermark/)
+
+## Relative artilce
+
+- [Python Tiling Watermark Examples: How to Create Repeated Watermarks in Documents](https://blog.groupdocs.com/watermark/tiling-watermark-python/)
 
 ## 🤝 Support & Community
 

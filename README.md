@@ -2,7 +2,7 @@
 
 **Document security** made simple with Python watermarking solutions. This repository contains comprehensive examples demonstrating **how to watermark files**, **add watermark**, **create watermark**, **remove watermark**, and implement **invisible watermarking for documents** using GroupDocs.Watermark for Python via .NET.
 
-## 🔐 Python Watermarking Library for Document Security & PDF Content Protection
+## 🔐 What You Can Do with GroupDocs.Watermark for Python
 
 **Protect documents with watermarks** across 40+ file formats with powerful **content protection with watermarking** capabilities:
 
@@ -85,7 +85,7 @@ def run():
 ### Basic Watermarking Operations
 - [How to watermark in](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/basic_usage/add_text_watermark.py) PDF documents with Python
 - [Create watermark](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/basic_usage/add_text_watermark_with_custom_font.py) with custom fonts and styling
-- [Add watermark]((https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/advanced_usage/adding/pdf/pdf_add_watermarks_to_specific_pages.py)) to multiple pages simultaneously
+- [Add watermark](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/advanced_usage/adding/pdf/pdf_add_watermarks_to_specific_pages.py) to multiple pages simultaneously
 - [Customize watermark](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/basic_usage/add_tile_watermark.py) transparency, rotation, and positioning — with the ability to apply tiled watermarks across entire pages for full coverage.
 
 ### Advanced Document Security

@@ -102,10 +102,16 @@ def run():
 
 **How to watermark files** across multiple formats using Python:
 
-**Documents:** PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, RTF  
-**Images:** PNG, JPG, BMP, TIFF, GIF, WEBP  
-**Email:** EML, MSG, EMLX  
-**Other:** Visio files (VSD, VSDX), OpenOffice (ODT)
+- **Fixed Layout:** PDF 
+- **Microsoft Word:** DOC, DOT, DOCX, DOCM, DOTX, DOTM, RTF  
+- **Microsoft Excel:** XLSX, XLSM, XLTM, XLT, XLTX, XLS  
+- **Microsoft PowerPoint:** PPTX, PPTM, PPSX, PPSM, POTX, POTM, PPT, PPS  
+- **Microsoft Visio:** VSD, VDX, VSDX, VSTX, VSS, VSSX, VSDM, VSSM, VSTM, VTX, VSX  
+- **OpenOffice:** ODT  
+- **Email:** EML, EMLX, OFT, MSG  
+- **Image:** BMP, GIF, JPG/JPEG/JPE, JP2, PNG, TIFF, WEBP
+
+See [detailed list of file formats](https://docs.groupdocs.com/watermark/python-net/supported-document-formats/).
 
 ### System Requirements
 - Python 3.6+ 

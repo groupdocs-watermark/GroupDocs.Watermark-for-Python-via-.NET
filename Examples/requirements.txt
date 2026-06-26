@@ -1,6 +1,5 @@
-certifi==2023.11.17
-charset-normalizer==3.3.2
-idna==3.4
-requests==2.31.0
-urllib3==2.1.0
-groupdocs-watermark-net==25.3
+# GroupDocs.Watermark for Python via .NET — a self-contained platform wheel that
+# bundles the embedded runtime (no separate .NET install needed). pip selects the
+# correct wheel for your OS automatically (win_amd64, manylinux1_x86_64, macOS).
+groupdocs-watermark-net==26.6.0
+requests>=2.32.5

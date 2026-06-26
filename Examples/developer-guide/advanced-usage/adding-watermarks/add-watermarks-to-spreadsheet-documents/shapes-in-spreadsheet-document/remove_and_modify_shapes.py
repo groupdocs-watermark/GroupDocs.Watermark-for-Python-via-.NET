@@ -1,0 +1,14 @@
+from groupdocs.watermark import Watermarker
+from groupdocs.watermark.options.spreadsheet import SpreadsheetLoadOptions
+
+def remove_and_modify_shapes():
+    with Watermarker("./spreadsheet.xlsx", SpreadsheetLoadOptions()) as watermarker:
+        content = watermarker.get_content()
+        for worksheet in content.worksheets:
+            for i in range(len(worksheet.shapes) - 1, -1, -1):
+                if worksheet.shapes[i].text == "CONFIDENTIAL":
+                    worksheet.shapes.remove_at(i)
+        watermarker.save("./output.xlsx")
+
+if __name__ == "__main__":
+    remove_and_modify_shapes()

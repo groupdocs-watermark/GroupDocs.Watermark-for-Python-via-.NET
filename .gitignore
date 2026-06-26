@@ -1,5 +1,10 @@
 __pycache__
 Output/
+# Generated example outputs are written next to each example script as output.*
+output.*
+**/output.*
+output-*
+**/output-*
 .venv
 .pypirc
 .DS_Store

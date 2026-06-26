@@ -1,146 +1,122 @@
-# GroupDocs.Watermark Python Examples - Protect Documents with Watermarks
+# GroupDocs.Watermark for Python via .NET - Code Examples
 
-**Document security** made simple with Python watermarking solutions. This repository contains comprehensive examples demonstrating **how to watermark files**, **add watermark**, **create watermark**, **remove watermark**, and implement **invisible watermarking for documents** using GroupDocs.Watermark for Python via .NET.
+[![banner](https://raw.githubusercontent.com/groupdocs/groupdocs.github.io/master/img/banners/groupdocs-watermark-net-banner.png)](https://releases.groupdocs.com/watermark/python-net/)
 
-## 🔐 What You Can Do with GroupDocs.Watermark for Python
+[Product Page](https://products.groupdocs.com/watermark/python-net/) | [Docs](https://docs.groupdocs.com/watermark/python-net/) | [Demos](https://products.groupdocs.app/watermark/family) | [API Reference](https://reference.groupdocs.com/watermark/python-net/) | [Blog](https://blog.groupdocs.com/category/watermark/) | [Search](https://search.groupdocs.com/) | [Free Support](https://forum.groupdocs.com/c/watermark) | [Temporary License](https://purchase.groupdocs.com/temporary-license)
 
-**Protect documents with watermarks** across 40+ file formats with powerful **content protection with watermarking** capabilities:
+[GroupDocs.Watermark for Python via .NET](https://products.groupdocs.com/watermark/python-net/) adds, searches, and removes text and image watermarks across PDF, Word, Excel, PowerPoint, Visio, email, and image formats through one unified API — style and position watermarks, tile them across a page, lock them, target specific pages or slides, and search or remove existing watermarks — all on-premise, with no MS Office or OpenOffice installation required.
 
-- **Custom watermark** creation with personalized text and images
-- **Customize watermark** appearance, positioning, and transparency
-- **Custom fonts** support for branded watermarking solutions
-- **Watermark automation for enterprise** Python workflows
-- Advanced search and removal capabilities
-- **Invisible watermarking for documents** with steganographic techniques
-- **Tiling watermarks** across entire document pages for comprehensive coverage
+## Features
 
-## 📁 Repository Structure
+- **Text & Image Watermarks**: Add styled text or image watermarks with configurable color, opacity, rotation, alignment, and sizing.
+- **Custom Fonts**: Load and apply custom fonts for branded watermarks.
+- **Tiled Watermarks**: Repeat a watermark across an entire page for full coverage.
+- **Format-Specific Placement**: PDF annotations/artifacts, presentation slides, Visio pages, spreadsheet backgrounds and header/footers, and locked Word watermarks.
+- **Page Targeting**: Apply watermarks to specific pages or the last page only.
+- **Search & Modify**: Find watermarks by text, image similarity, or formatting; edit their text or remove them.
+- **On-Premise**: No MS Office or OpenOffice installation required.
 
-| Directory/File | Description |
-|----------------|-------------|
-| **Examples/** | Root folder containing all example scripts |
-| ├── [advanced_usage](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/tree/master/Examples/advanced_usage) | Advanced usage examples demonstrating complex watermarking scenarios |
-| ├── [basic_usage](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/tree/master/Examples/basic_usage) | Basic examples for adding, editing, and removing watermarks |
-| ├── [quick_start](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/tree/master/Examples/quick_start) | Quick start examples to run and test watermark features immediately |
-| ├── [run_examples.py](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/run_examples.py) | Main script to execute all examples |
-| ├── [test_files.py](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/test_files.py) | Paths and settings for test files used in examples |
-| └── [utils.py](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/utils.py) | Utility functions for handling watermark operations |
+## Supported File Formats
 
-## How to run examples
+GroupDocs.Watermark for Python via .NET supports a wide range of file formats, including Word, Excel, PowerPoint, PDF, OpenDocument, Visio, email, and image formats. See the [full list of supported formats](https://docs.groupdocs.com/watermark/python-net/getting-started/supported-document-formats/) for details.
 
-* Call the following command from the root folder of repository   
-`python .\Examples\run_examples.py`
-* Review rendered files in `.\Examples\Output` folder
+## Get Started
 
+1. **Set Up Environment**: Ensure that [Python 3.5+](https://www.python.org/downloads/) is installed on your system.
 
-## 🚀 Quick Start - How to Watermark Documents in Python
+2. **Get the Code**: Clone or download this repository.
 
-### Installation
+   ```bash
+   git clone git@github.com:groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET.git
+   ```
 
-Install via pip:
+3. **Navigate to the `Examples` Folder**
+
+   ```bash
+   cd ./GroupDocs.Watermark-for-Python-via-.NET/Examples
+   ```
+
+4. **Install Package**: install dependencies with pip:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+   > **Temporary note:** version `26.6.0` is not yet on PyPI (the latest PyPI release is `25.12`). Until it is published, `requirements.txt` points at the platform wheel on the [GroupDocs Releases](https://releases.groupdocs.com/watermark/python-net/) site. Download the `.whl` for your platform (`win_amd64`, `manylinux*_x86_64`) and install it directly:
+
+   ```bash
+   pip install ./groupdocs_watermark_net-26.6.0-py3-none-win_amd64.whl
+   ```
+
+5. **Configure License (Optional)**: examples run with the full feature set when a license is available, looking in two places:
+
+   - The `GROUPDOCS_LIC_PATH` environment variable — set it to the absolute path of your `.lic` file (recommended; the package auto-applies it at import).
+   - A license applied explicitly in code via `License().set_license(...)`.
+
+   Without a license, the library runs in evaluation mode (the output is watermarked and only the first watermark per document is kept). Get a free 30-day [temporary license](https://purchase.groupdocs.com/temporary-license) for evaluation.
+
+6. **Run the Examples**: To run all the examples, execute the following command:
+
+   ```bash
+   python ./run_all_examples.py
+   ```
+
+   Each example runs in its own subprocess with paths relative to its own folder, so output files are placed next to the example script. You can also run an individual example by navigating to its folder and running the script directly.
+
+## Project Structure
+
+```
+Examples/
+├── run_all_examples.py     # Runs every example and prints a pass/fail summary
+├── _run_example.py         # Per-example wrapper (applies license, isolates eval limits)
+├── requirements.txt
+├── licensing/              # Set a license from a file, a stream, or a metered key
+├── getting-started/
+│   └── hello-world/        # Minimal add-a-watermark example
+└── developer-guide/
+    ├── basic-usage/        # Add text/image/custom-font/tile watermarks, document info, formats
+    └── advanced-usage/     # Loading options, format-specific placement, search & modify
+```
+
+## Run with Docker
+
+The repository ships a `Dockerfile` that builds a Linux image with Python 3.13, the .NET runtime dependencies (`libicu-dev`, `libgdiplus`, `libfontconfig1`), and the `groupdocs-watermark-net` package preinstalled.
+
 ```bash
-pip install groupdocs-watermark-net
+# Build the image
+docker build -t watermark-examples .
+
+# Run unlicensed (evaluation mode)
+docker run --rm watermark-examples
+
+# Run with a license mounted from the host
+docker run --rm \
+    -v /path/to/license:/lic:ro \
+    -e GROUPDOCS_LIC_PATH=/lic/your-license.lic \
+    watermark-examples
 ```
 
-### Add Watermark to Documents
+On Windows with Git Bash, set `export MSYS_NO_PATHCONV=1` before `docker run` to prevent MSYS from rewriting the mounted license path.
 
-Learn **how to watermark** your documents with this simple Python example:
+## AI agents and LLM integration
 
-```python
-import groupdocs.watermark as gw
-import groupdocs.watermark.watermarks as gww
-import groupdocs.watermark.common as gwс
+The `groupdocs-watermark-net` wheel ships a bundled `AGENTS.md` reference for AI coding assistants (Claude Code, Cursor, GitHub Copilot in agent mode, and similar). Once the package is installed, the reference is discovered automatically at `groupdocs/watermark/AGENTS.md` — it covers canonical imports, quick-start usage, licensing, the API surface table, and troubleshooting. A copy also lives in this repository's root [`AGENTS.md`](./AGENTS.md).
 
-def run():
-  with gw.Watermarker("sample.docx") as watermarker:
-      font = gww.Font("Arial", 36.0)
-      watermark = gww.TextWatermark("top secret", font)
-      watermark.foreground_color = gww.Color.red;
-      watermark.horizontal_alignment = gwс.HorizontalAlignment.CENTER
-      watermark.vertical_alignment = gwс.VerticalAlignment.CENTER
+For on-demand documentation lookups, combine the bundled `AGENTS.md` with the GroupDocs MCP server at `https://docs.groupdocs.com/mcp`. See the [AI agents and LLM integration](https://docs.groupdocs.com/watermark/python-net/agents-and-llm-integration/) page for the per-tool setup snippets.
 
-      watermarker.add(watermark)
-      watermarker.save(join(output_directory, "result.docx"))
-```
+## Continuous integration
 
-### How to Add Image Watermark 
+The `.github/workflows/` directory contains the CI matrix that runs the full example suite on every push. The matrix is reproducible locally via the `Dockerfile` above.
 
-```python
-import groupdocs.watermark as gw
-import groupdocs.watermark.watermarks as gww
-import groupdocs.watermark.common as gwс
+## More Resources
 
-def run():
-  with gw.Watermarker("sample.xlsx") as watermarker:
-      watermark = gww.ImageWatermark("logo.png")
-      watermark.horizontal_alignment = gwс.HorizontalAlignment.CENTER
-      watermark.vertical_alignment = gwс.VerticalAlignment.CENTER
+Find additional details and examples in the [GroupDocs.Watermark for Python via .NET documentation](https://docs.groupdocs.com/watermark/python-net/).
 
-      watermarker.add(watermark)
-      watermarker.save(join(output_directory, "result.xlsx"))
-```
-
-## 📋 Python Watermarking Examples by Use Case
-
-### Basic Watermarking Operations
-- [How to watermark in](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/basic_usage/add_text_watermark.py) PDF documents with Python
-- [Create watermark](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/basic_usage/add_text_watermark_with_custom_font.py) with custom fonts and styling
-- [Add watermark](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/advanced_usage/adding/pdf/pdf_add_watermarks_to_specific_pages.py) to multiple pages simultaneously
-- [Customize watermark](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/basic_usage/add_tile_watermark.py) transparency, rotation, and positioning — with the ability to apply tiled watermarks across entire pages for full coverage.
-
-### Advanced Document Security
-- [Delete watermark from](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/advanced_usage/searching_modifying/remove_watermark.py) specific document regions
-- [Can you remove watermark from](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/advanced_usage/loading/load_password_protected_document.py) password-protected files
-
-### Enterprise Python Solutions
-- **Watermark automation for enterprise** document management systems
-- **Content protection with watermarking** for sensitive business documents
-- **Document security** compliance implementations
-- **Customized product** branding with corporate watermarks
-
-## 🎯 Supported File Formats
-
-**How to watermark files** across multiple formats using Python:
-
-- **Fixed Layout:** PDF 
-- **Microsoft Word:** DOC, DOT, DOCX, DOCM, DOTX, DOTM, RTF  
-- **Microsoft Excel:** XLSX, XLSM, XLTM, XLT, XLTX, XLS  
-- **Microsoft PowerPoint:** PPTX, PPTM, PPSX, PPSM, POTX, POTM, PPT, PPS  
-- **Microsoft Visio:** VSD, VDX, VSDX, VSTX, VSS, VSSX, VSDM, VSSM, VSTM, VTX, VSX  
-- **OpenOffice:** ODT  
-- **Email:** EML, EMLX, OFT, MSG  
-- **Image:** BMP, GIF, JPG/JPEG/JPE, JP2, PNG, TIFF, WEBP
-
-See [detailed list of file formats](https://docs.groupdocs.com/watermark/python-net/supported-document-formats/).
-
-### System Requirements
-- Python 3.6+ 
-- .NET runtime (automatically handled via Python.NET)
-- Compatible with Windows, macOS, and Linux
-
-## 📖 Documentation & Resources
-
-- [Complete Python API Documentation](https://docs.groupdocs.com/watermark/python-net/)
-- [Live Demo - **How to Watermark** Online](https://products.groupdocs.com/watermark/family)
-- [Python Package on PyPI](https://pypi.org/project/groupdocs-watermark-net/)
-- [Developer Blog](https://blog.groupdocs.com/category/watermark/)
-
-## Relative artilce
-
-- [Python Tiling Watermark Examples: How to Create Repeated Watermarks in Documents](https://blog.groupdocs.com/watermark/tiling-watermark-python/)
-
-## 🤝 Support & Community
-
-- [Free Support Forum](https://forum.groupdocs.com/c/watermark) - Get help with **how to remove watermark from free** community
-- [Search Documentation](https://search.groupdocs.com/) - Find specific **watermark in** Python solutions
-- [Temporary License](https://purchase.groupdocs.com/temporary-license) - Test full features
-
-## 🏷️ Tags
-
-`python-watermarking` `document-security` `content-protection` `pdf-watermark` `document-watermark` `remove-watermark` `add-watermark` `custom-watermark` `enterprise-security` `python-library`
+We also offer **GroupDocs.Watermark** packages for other platforms:
+* [**GroupDocs.Watermark for .NET**](https://products.groupdocs.com/watermark/net/)
+* [**GroupDocs.Watermark for Java**](https://products.groupdocs.com/watermark/java/)
+* [**GroupDocs.Watermark for Node.js via Java**](https://products.groupdocs.com/watermark/nodejs-java/)
 
 ---
 
-**Start securing your Python applications today!** Clone this repository to explore comprehensive examples of **how to watermark a** document, implement **document security**, and leverage **watermark automation for enterprise** Python solutions.
-
-[⬇️ Download Examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/archive/master.zip) | [🏠 GroupDocs Home](https://www.groupdocs.com/) | [📧 Contact Sales](https://purchase.groupdocs.com/temporary-license)
+[Product Page](https://products.groupdocs.com/watermark/python-net/) | [Docs](https://docs.groupdocs.com/watermark/python-net/) | [Demos](https://products.groupdocs.app/watermark/family) | [API Reference](https://reference.groupdocs.com/watermark/python-net/) | [Blog](https://blog.groupdocs.com/category/watermark/) | [Search](https://search.groupdocs.com/) | [Free Support](https://forum.groupdocs.com/c/watermark) | [Temporary License](https://purchase.groupdocs.com/temporary-license)

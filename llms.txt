@@ -6,10 +6,10 @@ Repository containing Python examples for GroupDocs.Watermark for Python via .NE
 ## Core Functionality
 - Add text/image watermarks to documents via Pythonic API
 - Remove existing watermarks (including third-party)
-- Search watermarks by text, formatting, or custom criteria
-- Invisible watermarking and steganographic embedding
-- Batch watermark processing and automation
-- Custom watermark styling with fonts, colors, transparency
+- Search watermarks by text, image similarity, or formatting criteria
+- Format-specific placement (PDF annotations/artifacts, slides, worksheets, locked Word watermarks)
+- Page and slide targeting (specific pages, last page only)
+- Custom watermark styling with fonts, colors, opacity, rotation, alignment
 - Tiling watermarks for comprehensive page coverage
 - Context manager support for automatic resource cleanup
 
@@ -28,15 +28,19 @@ Repository containing Python examples for GroupDocs.Watermark for Python via .NE
 **Other**: Visio files, various proprietary formats
 
 ## Technical Details
-- Python 3.6+ compatibility
-- PyPI package: groupdocs-watermark-net
-- Built on .NET via Python.NET bridge
+- Python 3.5–3.14 compatibility
+- PyPI package: groupdocs-watermark-net (current release: 26.6.0)
+- Self-contained wheels — no separate .NET runtime required
 - Cross-platform: Windows, macOS, Linux
 - Pythonic API with context managers and type hints
-- Thread-safe operations for concurrent processing
+- Bundled AGENTS.md reference for AI coding assistants
 
 ## Repository Structure
-- `/Examples` - Core Python implementation examples with complete source code
+- `/Examples/licensing` - Apply a license from a file, stream, or metered key
+- `/Examples/getting-started/hello-world` - Minimal add-a-watermark example
+- `/Examples/developer-guide/basic-usage` - Add text/image/custom-font/tile watermarks, read document info, list formats
+- `/Examples/developer-guide/advanced-usage` - Loading options, format-specific placement, search and modify watermarks
+- `/Examples/run_all_examples.py` - Runs every example with a pass/fail summary
 
 ## Python Integration
 - PyPI package management (pip install)

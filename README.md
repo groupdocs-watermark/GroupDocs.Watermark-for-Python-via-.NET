@@ -1,6 +1,6 @@
 # GroupDocs.Watermark for Python via .NET - Code Examples
 
-[![banner](https://raw.githubusercontent.com/groupdocs/groupdocs.github.io/master/img/banners/groupdocs-watermark-net-banner.png)](https://releases.groupdocs.com/watermark/python-net/)
+[![banner](https://raw.githubusercontent.com/groupdocs/groupdocs.github.io/master/img/banners/groupdocs-watermark-python-net-banner.png)](https://releases.groupdocs.com/watermark/python-net/)
 
 [Product Page](https://products.groupdocs.com/watermark/python-net/) | [Docs](https://docs.groupdocs.com/watermark/python-net/) | [Demos](https://products.groupdocs.app/watermark/family) | [API Reference](https://reference.groupdocs.com/watermark/python-net/) | [Blog](https://blog.groupdocs.com/category/watermark/) | [Search](https://search.groupdocs.com/) | [Free Support](https://forum.groupdocs.com/c/watermark) | [Temporary License](https://purchase.groupdocs.com/temporary-license)
 
@@ -42,7 +42,7 @@ GroupDocs.Watermark for Python via .NET supports a wide range of file formats, i
    pip install -r requirements.txt
    ```
 
-   > **Temporary note:** version `26.6.0` is not yet on PyPI (the latest PyPI release is `25.12`). Until it is published, `requirements.txt` points at the platform wheel on the [GroupDocs Releases](https://releases.groupdocs.com/watermark/python-net/) site. Download the `.whl` for your platform (`win_amd64`, `manylinux*_x86_64`) and install it directly:
+   Alternatively, download the platform-specific `.whl` file from the [GroupDocs Releases](https://releases.groupdocs.com/watermark/python-net/) website and install it directly (adjust the filename to your platform — `win_amd64`, `manylinux*_x86_64`, `macosx_*_arm64`, `macosx_*_x86_64`):
 
    ```bash
    pip install ./groupdocs_watermark_net-26.6.0-py3-none-win_amd64.whl
